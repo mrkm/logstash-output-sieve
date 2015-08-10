@@ -2,9 +2,9 @@
 require "logstash/outputs/base"
 require "logstash/namespace"
 
-# An example output that does nothing.
-class LogStash::Outputs::Example < LogStash::Outputs::Base
-  config_name "example"
+# An sieve output that does nothing.
+class LogStash::Outputs::Sieve < LogStash::Outputs::Base
+  config_name "sieve"
 
   public
   def register
@@ -14,4 +14,4 @@ class LogStash::Outputs::Example < LogStash::Outputs::Base
   def receive(event)
     return "Event received"
   end # def event
-end # class LogStash::Outputs::Example
+end # class LogStash::Outputs::Sieve
